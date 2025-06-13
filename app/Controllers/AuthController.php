@@ -26,7 +26,7 @@ class AuthController extends BaseController {
                 $username = $this->request->getVar('username');
                 $password = $this->request->getVar('password');
 
-                $dataUser = $this->user->where(['username' => $username])->first(); //pasw 1234567 username yunazriel
+                $dataUser = $this->user->where(['username' => $username])->first(); //pasw 1234567
 
                 if ($dataUser) {
                     if (password_verify($password, $dataUser['password'])) {
